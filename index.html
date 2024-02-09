@@ -43,9 +43,17 @@
                 display: flex;
                 flex-direction: column;
                 font-family: TitilliumWeb-Regular;
+                background-image: url("/assets/bkg.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
                 background-color: #c3b9b9;
+                background-position: center;
+                z-index: 1;
+                min-height: 100vh;
                 color: #292424;
                 min-height: 100vh;
+                max-width: 100vw;
             }
             .hdbox-justify {
                 display: flex;
@@ -55,19 +63,23 @@
             .hdbox-text {
                 justify-content: flex-end;
                 text-align: right;
-                margin-left: 10px;
+                margin-right: 5px;
+                margin-left: -80px;
                 padding-top: 3px;
             }
             .hdbox {
+                z-index: 10;
+                position: fixed;
                 text-align: center;
-                border-bottom: 5px solid #c20201;
+                border-bottom: 2px solid #c20201;
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
                 margin-top: -10px;
                 margin-left: -10px;
                 margin-right: -10px;
                 background-color: #3b3833;
-                padding: 10px;
+                padding: 2px;
+                min-width: 100vw;
                 color: white;
             }
             b,
@@ -106,6 +118,16 @@
             a.anchor-normal:hover {
                 color: orange;
             }
+            a.anchor-black {
+                color: black;
+                text-decoration: none;
+            }
+            a.anchor-black:visited {
+                color: black;
+            }
+            a.anchor-black:hover {
+                color: orange;
+            }
             .cent-content {
                 display: flex;
                 flex-wrap: wrap;
@@ -125,12 +147,14 @@
                 margin-right: 5px;
             }
             iframe.border {
+                z-index: 2;
                 border: 0px solid;
                 border-radius: 5px;
                 padding: 0px;
                 margin: 6px;
             }
             .soccard {
+                z-index: 2;
                 display: inline-block;
                 text-align: left;
                 border: 1px solid #c20201;
@@ -143,6 +167,7 @@
                 padding-bottom: 24px;
             }
             .icon-animation {
+                z-index: 2;
                 position: relative;
                 bottom: 26px;
                 left: 50%;
@@ -179,11 +204,14 @@
                 background-color: #e2e2e2;
                 color: black;
                 font-size: 20px;
+                z-index: 2;
             }
             .boxtxt-hrz-cont {
                 display: grid;
+                z-index: 2;
             }
             img.boxtxt-hrz-img {
+                z-index: 2;
                 float: left;
                 max-height: 100%;
                 max-width: 100%;
@@ -201,12 +229,15 @@
                 background-color: #c20201;
                 color: white;
                 font-size: 20px;
+                z-index: 2;
             }
             .boxtxt-hrz-txt {
+                z-index: 2;
                 padding-bottom: auto;
                 padding-left: 6px;
             }
             .smallbox {
+                z-index: 3;
                 display: inline-block;
                 text-align: center;
                 border: 1px solid #c20201;
@@ -218,12 +249,14 @@
                 color: white;
             }
             .arrow-white {
+                z-index: 2;
                 border: solid white;
                 border-width: 0 3px 3px 0;
                 display: inline-block;
                 padding: 3px;
             }
             .arrow-black {
+                z-index: 2;
                 border: solid dimgray;
                 border-width: 0 3px 3px 0;
                 display: inline-block;
@@ -238,12 +271,14 @@
                 transform: rotate(-45deg);
             }
             footer {
+                z-index: 3;
                 margin-top: auto;
             }
             .f1 {
                 font-size: 20px;
             }
             .footbox-justify {
+                z-index: 3;
                 display: flex;
                 justify-content: space-between;
             }
@@ -254,7 +289,7 @@
             }
             .footbox {
                 text-align: center;
-                border-top: 5px solid #c20201;
+                border-top: 2px solid #c20201;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
                 margin-bottom: -10px;
@@ -265,6 +300,7 @@
                 color: white;
             }
             .grid-img-container {
+                z-index: 2;
                 display: grid;
                 grid-template-columns: auto auto auto;
                 padding: 10px;
@@ -291,9 +327,9 @@
         </div>
         <br />
         &nbsp;<br />
-        <h1>
+        <h1 style="margin-top: 100px">
             <center>
-                <font style="font-size: 23px">
+                <font style="font-size: 23px; z-index: 8">
                     Hello dear visitors, my name is Irfan Togashi (redwolf7),
                     nothing special here by the way...</font
                 >
@@ -314,7 +350,7 @@
                         Oh yeah I forgor...<br />
                         I'm Irfan Togashi AKA redwolf7 AKA datbadwolf97, you
                         name it 'cause I also confused with these
-                        usernames/nicknames/IGNs to be fair, I do frontend
+                        usernames/nicknames/IGNs to be fair, I do frontend mobile
                         WebDev, a little Python thingy, some yee yee whack music
                         making (now I'm kinda wanted to retired from doing that
                         because frick y'all Indonesian TikTok remixers AKA music
@@ -323,7 +359,32 @@
                         your only cool guy in the middle of sahara desert, an
                         average Vtuber clip watcher, an Arknights player,
                         becoming a sensei at Kivotos and simping over a robot
-                        student and what else? Oh, a certified furrylover.
+                        student and what else? Oh, a certified furrylover.<br />
+                        &nbsp;<br />
+                        My Swiss Army knives:
+                        <ul>
+                          <li>
+                            <a class="anchor-black" href="https://termux.dev">
+                              Termux
+                            </a>
+                          </li>
+                          <li>
+                            <a class="anchor-black" href="https://www.samsung.com/id/smartphones/galaxy-a/galaxy-a03-blue-32gb-sm-a035fzbdxid/">Samsung Galaxy A03 4/64GB</a>
+                          </li>
+                          <li>
+                            <a class="anchor-black" href="https://www.lenovo.com/ke/en/laptops/thinkpad/thinkpad-l-series/L540/p/22TP2TBL540">Lenovo Thinkpad L540</a>
+                          </li>
+                          <li>
+                            <a class="anchor-black" href="https://en.m.wikipedia.org/wiki/Brain">
+                              A fully functional brain
+                            </a>
+                          </li>
+                          <li>
+                            <a class="anchor-black" href="https://www.wacom.com/en-us/products/pen-tablets/one-by-wacom">
+                              Wacom One CTL-472 (used occasionally)
+                            </a>
+                          </li>
+                        </ul>
                     </p>
                 </div>
             </h2>
@@ -331,7 +392,7 @@
         <br />
         &nbsp;<br />
         <center>
-            <div class="smallbox">
+            <div class="smallbox" style="z-index: 2">
                 More Stuff<br />
                 <center>
                     <i class="arrow-white down"></i>
@@ -527,7 +588,13 @@
                 width="320px"
             />
             <a target="_blank" href="/assets/gfxs/BIOS.png"> </a><br />
-            <font style="font-size: 15px; font-style: italic"
+            <font
+                style="
+                    font-size: 15px;
+                    font-style: italic;
+                    z-index: 3;
+                    font-weight: bold;
+                "
                 >These are royalty free works, feel free to download, share and
                 made them as your own merch (also please be mindful to put a
                 credits into myself as the creator), the displayed images above
