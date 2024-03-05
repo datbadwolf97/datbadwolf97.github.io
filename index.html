@@ -22,7 +22,7 @@
             }
             @font-face {
                 font-family: TitilliumWeb-SemiBold;
-                src: url("/assets/TitilliumWeb-SemiBold.ttf.ttf")
+                src: url("/assets/TitilliumWeb-SemiBold.ttf")
                     format("truetype");
                 font-weight: bold;
                 font-style: normal;
@@ -207,7 +207,11 @@
                 z-index: 2;
             }
             .boxtxt-hrz-cont {
-                display: grid;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-items: center;
+                align-items: center;
                 z-index: 2;
             }
             img.boxtxt-hrz-img {
@@ -217,12 +221,19 @@
                 max-width: 100%;
                 padding: 5px;
             }
+            .centering-force {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
             .boxtxt-hrz {
                 position: relative;
                 text-align: left;
                 padding-top: 0px;
                 padding: 4px;
-                margin: auto;
+                margin: 25px;
                 border-right: 4px solid #c20201;
                 border-left: 4px solid #c20201;
                 border-radius: 5px;
@@ -230,10 +241,9 @@
                 color: white;
                 font-size: 20px;
                 z-index: 2;
+                max-width: 50%;
             }
             .boxtxt-hrz-txt {
-                z-index: 2;
-                padding-bottom: auto;
                 padding-left: 6px;
             }
             .smallbox {
