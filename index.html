@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- This website is optimised for my Samsung Galaxy A05s. -->
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!--<link rel="stylesheet" href="style.css" />-->
-        <!--Use this if it has a separate CSS File -->
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-        <title>datbadwolf97/redwolf7 WebDev site.</title>
+        <meta name="viewport" content="witdh=device-witdh, initial-scale=1" />
+        <meta name="description" content="redwolf7's Github Page" />
+        <meta name="author" content="IRFAN TOGASHI"/>
+        <link rel="icon" href="/assets/favicon.png" type="image/png" />
+        <title>redwolf7 Github Page!</title>
         <style>
             @font-face {
                 font-family: TitilliumWeb-Regular;
@@ -22,7 +23,7 @@
             }
             @font-face {
                 font-family: TitilliumWeb-SemiBold;
-                src: url("/assets/TitilliumWeb-SemiBold.ttf")
+                src: url("/assets/TitilliumWeb-SemiBold.ttf.ttf")
                     format("truetype");
                 font-weight: bold;
                 font-style: normal;
@@ -39,650 +40,377 @@
                 font-weight: normal;
                 font-style: italic;
             }
+            @keyframes bopping {
+                0% {
+                    transform: scale(40%);
+                }
+                10% {
+                    transform: scale(50%);
+                }
+                50% {
+                    transform: scale(100%);
+                }
+                75% {
+                    transform: scale(90%);
+                }
+                100% {
+                    transform: scale(100%);
+                }
+            }
+            /* Unused keyframes for header image, please refer to [1] body tag*/
+            /*@keyframes fade-in-img {
+                from {
+                    filter: opacity(0%);
+                    margin-top: -100px;
+                }
+                to {
+                    filter: opacity(100%);
+                    margin-top: 10px;
+                }
+            }*/
+            @keyframes body-mod {
+                from {
+                    filter: opacity(0%);
+                }
+                to {
+                    filter: opacity(100%);
+                }
+            }
             body {
-                display: flex;
-                flex-direction: column;
-                font-family: TitilliumWeb-Regular;
-                background-image: url("/assets/bkg.png");
-                background-repeat: no-repeat;
+                background-color: hsl(240, 3.7%, 15.9%);
+                /*Idk sometimes I don't feel like to add a background image*/
+                /*background-image: url("/assets/bkg.png");*/
                 background-attachment: fixed;
-                background-size: cover;
-                background-color: #c3b9b9;
-                background-position: center;
-                z-index: 1;
+                margin: 0px;
+                padding: 0px;
                 min-height: 100vh;
-                color: #292424;
-                min-height: 100vh;
-                max-width: 100vw;
-            }
-            .hdbox-justify {
-                display: flex;
-                justify-content: space-between;
-                padding: 4px;
-            }
-            .hdbox-text {
-                justify-content: flex-end;
-                text-align: right;
-                margin-right: 5px;
-                margin-left: -80px;
-                padding-top: 3px;
-            }
-            .hdbox {
-                z-index: 10;
-                position: fixed;
-                text-align: center;
-                border-bottom: 2px solid #c20201;
-                border-bottom-left-radius: 15px;
-                border-bottom-right-radius: 15px;
-                margin-top: -10px;
-                margin-left: -10px;
-                margin-right: -10px;
-                background-color: #3b3833;
-                padding: 2px;
-                min-width: 100vw;
                 color: white;
+                animation: body-mod 1s ease-in-out;
             }
-            b,
-            bold,
-            strong {
-                font-family: TitilliumWeb-Bold;
+            a {
+                color: white;
+                text-decoration: none;
             }
-            .smbold {
-                font-family: TitilliumWeb-SemiBold;
+            a:hover {
+                color: hsl(188, 85.7%, 53.3%);
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                text-decoration: none;
             }
             i {
                 font-family: TitilliumWeb-Italic;
             }
-            font.ltf {
-                font-family: TitilliumWeb-Light;
-            }
-            p.left {
-                text-align: left;
-                padding: 4px;
-            }
-            p.right {
-                text-align-last: right;
-                padding: 4px;
-            }
-            p.center {
-                text-align: center;
-                padding: 4px;
-            }
-            a.anchor-normal {
-                color: white;
-                text-decoration: none;
-            }
-            a.anchor-normal:visited {
-                color: white;
-            }
-            a.anchor-normal:hover {
-                color: orange;
-            }
-            a.anchor-black {
-                color: black;
-                text-decoration: none;
-            }
-            a.anchor-black:visited {
-                color: black;
-            }
-            a.anchor-black:hover {
-                color: orange;
-            }
-            .cent-content {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding-top: 25px;
-                padding-bottom: 25px;
-            }
-            .cent-content-soc {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding-top: 25px;
-                padding-bottom: 25px;
-                padding-left: 5px;
-                padding-right: 5px;
-                margin-left: 5px;
-                margin-right: 5px;
-            }
-            iframe.border {
-                z-index: 2;
-                border: 0px solid;
-                border-radius: 5px;
-                padding: 0px;
-                margin: 6px;
-            }
-            .soccard {
-                z-index: 2;
-                display: inline-block;
-                text-align: left;
-                border: 1px solid #c20201;
-                border-radius: 5px;
-                background-color: #c20201;
-                margin: 5px;
-                padding-top: 46px;
-                padding-left: 24px;
-                padding-right: 24px;
-                padding-bottom: 24px;
-            }
-            .icon-animation {
-                z-index: 2;
-                position: relative;
-                bottom: 26px;
-                left: 50%;
-                width: 60px;
-                height: 60px;
-                margin-left: -28px;
-                border: 0px solid;
-                border-radius: 50%;
-                animation: icon-animation 2.8s infinite;
-            }
-            @keyframes icon-animation {
-                0%,
-                20%,
-                50%,
-                80%,
-                100% {
-                    transform: translateY(0);
-                }
-                40% {
-                    transform: translateY(-16px);
-                }
-                60% {
-                    transform: translateY(-10px);
-                }
-            }
-            .boxtxt {
-                position: relative;
-                text-align: left;
-                padding-top: 0px;
-                padding: 4px;
-                border-right: 4px solid #c20201;
-                border-left: 4px solid #c20201;
-                border-radius: 2px;
-                background-color: #e2e2e2;
-                color: black;
-                font-size: 20px;
-                z-index: 2;
-            }
-            .boxtxt-hrz-cont {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                justify-items: center;
-                align-items: center;
-                z-index: 2;
-            }
-            img.boxtxt-hrz-img {
-                z-index: 2;
-                float: left;
-                max-height: 100%;
-                max-width: 100%;
-                padding: 5px;
-            }
-            .centering-force {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-            }
-            .boxtxt-hrz {
-                position: relative;
-                text-align: left;
-                padding-top: 0px;
-                padding: 4px;
-                margin: 25px;
-                border-right: 4px solid #c20201;
-                border-left: 4px solid #c20201;
-                border-radius: 5px;
-                background-color: #c20201;
-                color: white;
-                font-size: 20px;
-                z-index: 2;
-                max-width: 50%;
-            }
-            .boxtxt-hrz-txt {
-                padding-left: 6px;
-            }
-            .smallbox {
-                z-index: 3;
-                display: inline-block;
-                text-align: center;
-                border: 1px solid #c20201;
-                border-radius: 5px;
+            b,
+            strong {
                 font-family: TitilliumWeb-Bold;
-                background-color: #c20201;
-                margin: 5px;
-                padding: 10px;
-                color: white;
             }
-            .arrow-white {
-                z-index: 2;
-                border: solid white;
-                border-width: 0 3px 3px 0;
-                display: inline-block;
-                padding: 3px;
-            }
-            .arrow-black {
-                z-index: 2;
-                border: solid dimgray;
-                border-width: 0 3px 3px 0;
-                display: inline-block;
-                margin-bottom: 3px;
-                margin-right: 2px;
-                padding: 3px;
-            }
-            .down {
-                transform: rotate(45deg);
-            }
-            .right {
-                transform: rotate(-45deg);
-            }
-            footer {
-                z-index: 3;
-                margin-top: auto;
-            }
-            .f1 {
-                font-size: 20px;
-            }
-            .footbox-justify {
-                z-index: 3;
+            .body-container {
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
             }
-            .footbox-text {
-                justify-content: flex-end;
-                margin-left: 10px;
-                padding-top: 3px;
+            /* Again, please refer to [1] on body tag*/
+            /*.header-container {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                position: relative;
             }
-            .footbox {
-                text-align: center;
-                border-top: 2px solid #c20201;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-                margin-bottom: -10px;
-                margin-left: -10px;
-                margin-right: -10px;
-                background-color: #3b3833;
-                padding: 10px;
+            .img-anim1 {
+                animation: fade-in-img 1s ease-in-out;
+                margin-bottom: 40px;
+                margin-top: 10px;
+            }*/
+            .force-center {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                padding: 0px;
+            }
+            .img-banner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2vh;
+                position: static;
+            }
+            .img-wide-style {
+                min-height: 20vw;
+                max-height: 20vw;
+                min-width: 95vw;
+                border: 0px solid;
+                border-radius: 5px;
+                object-fit: cover;
+            }
+            @media screen and (max-width: 720px) {
+                .img-wide-style {
+                    min-height: 40vw;
+                    max-height: 40vw;
+                    min-width: 95vw;
+                    border: 0px solid;
+                    border-radius: 5px;
+                    object-fit: cover;
+                }
+                .img-style-center-ontop {
+                    z-index: 3;
+                    margin-top: -110px;
+                    padding: 0px;
+                    margin-bottom: 0px;
+                    max-width: 180px;
+                    max-height: 180px;
+                    border: 6px solid hsl(240, 3.7%, 15.9%);
+                    border-radius: 50%;
+                    object-fit: fill;
+                    animation: bopping 1.1s ease-in-out;
+                }
+            }
+            .img-style-center-ontop {
+                z-index: 3;
+                margin-top: -110px;
+                padding: 0px;
+                margin-bottom: 0px;
+                max-width: 200px;
+                max-height: 200px;
+                border: 6px solid hsl(240, 3.7%, 15.9%);
+                border-radius: 50%;
+                object-fit: fill;
+                animation: bopping 1.1s ease-in-out;
+            }
+            .about-section {
+                background-color: hsl(240, 5.3%, 26.1%);
+                border: 0px solid;
+                border-radius: 5px;
+                margin: 0px;
+                padding: 12px;
                 color: white;
+                font-family: TitilliumWeb-Regular;
             }
-            .grid-img-container {
-                z-index: 2;
-                display: grid;
-                grid-template-columns: auto auto auto;
+            .socmed-card-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-top: 50px;
+                margin-bottom: 50px;
                 padding: 10px;
+                background-color: hsl(240, 5.3%, 26.1%);
+                border: 0px solid;
+                border-radius: 6px;
             }
-            .item-img-grid {
-                object-fit: contain;
-                margin: auto;
-            }
-            .img-grid-style {
-                border-radius: 10px;
+            .socmed-card {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 5px;
+                padding: 7px;
+                border: 0px solid;
+                border-radius: 6px;
+                min-width: 30vw;
+                max-width: 30vw;
+                max-height: 25vh;
+                font-family: TitilliumWeb-Regular;
+                font-weight: bold;
             }
         </style>
     </head>
     <body>
-        <div class="hdbox">
-            <div class="hdbox-justify">
-                <a class="anchor-normal" href="https://youtu.be/dQw4w9WgXcQ">
-                    <img src="/assets/toplogo-head.png" height="64px"
-                /></a>
-                <div class="hdbox-text">
-                    redwolf7/datbadwolf97<br /><strong>WebDev Site</strong>
-                </div>
-            </div>
+        <!-- [1] Sometimes, adding a header logo or icons something, is overrated so I
+        don't use it here, I'll leave the code intact just in case of future use... -->
+        <!--
+        <div class="header-container">
+            <img
+                class="img-anim1"
+                src="/assets/heading-img.png"
+                width="100px"
+                alt="header idk img..."
+            />
         </div>
-        <br />
-        &nbsp;<br />
-        <h1 style="margin-top: 100px">
-            <center>
-                <font style="font-size: 23px; z-index: 8">
+        -->
+        <div class="img-banner">
+            <img
+                class="img-wide-style"
+                src="/assets/wide-img-banner.png"
+                alt="Wide Image Banner"
+            />
+            <img
+                class="img-style-center-ontop"
+                src="/assets/profile-picture.png"
+                width="50%"
+                alt="image error? try to refresh the page or something
+            is wrong with my code..."
+            />
+        </div>
+        <center>
+            <p style="margin: 15px; font-family: TitilliumWeb-Bold">
+                <font style="font-size: 30px">REDWOLF7/DATBADWOLF97</font>
+                <br />
+                &nbsp;<br />
+                <font
+                    style="font-size: 17px; font-family: TitilliumWeb-Regular"
+                >
                     Hello dear visitors, my name is Irfan Togashi (redwolf7),
-                    nothing special here by the way...</font
-                >
-            </center>
-        </h1>
-        <br />
-        &nbsp;<br />
-        <main>
-            <h2>
-                <div class="boxtxt">
-                    <p class="left">
-                        <font style="font-size: 25px">
-                            <bold> Who the hell are you?! </bold>
-                        </font>
-                    </p>
-                    <hr />
-                    <p class="left">
-                        Oh yeah I forgor...<br />
-                        I'm Irfan Togashi AKA redwolf7 AKA datbadwolf97, you
-                        name it 'cause I also confused with these
-                        usernames/nicknames/IGNs to be fair, I do frontend mobile
-                        WebDev, a little Python thingy, some yee yee whack music
-                        making (now I'm kinda wanted to retired from doing that
-                        because frick y'all Indonesian TikTok remixers AKA music
-                        stealing<i>with extra sophisticated steps</i>), bash
-                        scripting, making memes, an actual Linux&copy; enjoyer,
-                        your only cool guy in the middle of sahara desert, an
-                        average Vtuber clip watcher, an Arknights player,
-                        becoming a sensei at Kivotos and simping over a robot
-                        student and what else? Oh, a certified furrylover.<br />
-                        &nbsp;<br />
-                        My Swiss Army knives:
-                        <ul>
-                          <li>
+                    nothing special here by the way...
+                </font>
+            </p>
+        </center>
+        <div class="force-center">
+            <div class="about-section">
+                <center>
+                    <font
+                        style="
+                            font-family: TitilliumWeb-Bold;
+                            font-size: 25px;
+                            margin-bottom: 10px;
+                        "
+                        >WHO THE HELL ARE YOU?!</font
+                    >
+                </center>
+                <div style="font-size: 10px; font-family: TitilliumWeb-Light">
+                    <h1>
+                        <p>
+                            Oh yeah I forgor...<br />
+                            I'm Irfan Togashi AKA redwolf7 AKA datbadwolf97, you
+                            name it 'cause I also confused with these
+                            usernames/nicknames/IGNs to be fair, I do frontend
+                            mobile WebDev, a little Python thingy, some yee yee
+                            whack music making (now I'm kinda wanted to retired
+                            from doing that because frick y'all Indonesian
+                            TikTok remixers AKA music stealing
+                            <i>with extra sophisticated steps</i> ), bash
+                            scripting, making memes, an actual Linux&copy;
+                            enjoyer, your only cool guy in the middle of sahara
+                            desert, an average Vtuber clip watcher, an Arknights
+                            player, becoming a sensei at Kivotos and simping
+                            over a robot student and what else? Oh, a certified
+                            furrylover.<br />
+                        </p>
+                    </h1>
+                </div>
+                <div style="font-size: 20px">
+                    &nbsp;<br />
+                    My Swiss Army knives:
+                    <ul>
+                        <li>
                             <a class="anchor-black" href="https://termux.dev">
-                              Termux
+                                Termux
                             </a>
-                          </li>
-                          <li>
-                            <a class="anchor-black" href="https://www.samsung.com/id/smartphones/galaxy-a/galaxy-a03-blue-32gb-sm-a035fzbdxid/">Samsung Galaxy A03 4/64GB</a>
-                          </li>
-                          <li>
-                            <a class="anchor-black" href="https://www.lenovo.com/ke/en/laptops/thinkpad/thinkpad-l-series/L540/p/22TP2TBL540">Lenovo Thinkpad L540</a>
-                          </li>
-                          <li>
-                            <a class="anchor-black" href="https://en.m.wikipedia.org/wiki/Brain">
-                              A fully functional brain
+                        </li>
+                        <li>
+                            <a
+                                class="anchor-black"
+                                href="https://m.gsmarena.com/samsung_galaxy_a05s-12584.php"
+                                >Samsung Galaxy A05s (UFS Model)</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="anchor-black"
+                                href="https://www.lenovo.com/ke/en/laptops/thinkpad/thinkpad-l-series/L540/p/22TP2TBL540"
+                                >Lenovo Thinkpad L540</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="anchor-black"
+                                href="https://en.m.wikipedia.org/wiki/Brain"
+                            >
+                                A fully functional brain
                             </a>
-                          </li>
-                          <li>
-                            <a class="anchor-black" href="https://www.wacom.com/en-us/products/pen-tablets/one-by-wacom">
-                              Wacom One CTL-472 (used occasionally)
+                        </li>
+                        <li>
+                            <a
+                                class="anchor-black"
+                                href="https://www.wacom.com/en-us/products/pen-tablets/one-by-wacom"
+                            >
+                                Wacom One CTL-472 (used occasionally)
                             </a>
-                          </li>
-                        </ul>
-                    </p>
+                        </li>
+                    </ul>
                 </div>
-            </h2>
-        </main>
-        <br />
-        &nbsp;<br />
-        <center>
-            <div class="smallbox" style="z-index: 2">
-                More Stuff<br />
-                <center>
-                    <i class="arrow-white down"></i>
-                </center>
             </div>
-        </center>
-        <div class="cent-content">
-            <iframe
-                class="border"
-                width="300"
-                height="300"
-                src="https://youtube.com/embed/F4sCbN-t-jI?=1&mute=0&loop=0"
-                frameborder="0"
-            ></iframe
-            ><br />
-            <iframe
-                class="border"
-                width="300"
-                height="300"
-                src="https://youtube.com/embed/taoF-KTqGzM?=1&mute=0&loop=0"
-                frameborder="0"
-            ></iframe>
-        </div>
-        <br />
-        &nbsp;<br />
-        <center>
-            <div class="smallbox">
-                Even More Stuff<br />
-                <center>
-                    <i class="arrow-white down"></i>
-                </center>
-            </div>
-        </center>
-        <div class="cent-content-soc">
-            <div class="soccard">
-                <div class="icon-animation">
-                    <img src="/assets/gitlogo.png" width="56" height="56" />
-                </div>
-                <a class="anchor-normal" href="http://github.com/datbadwolf97">
-                    <b>GitHub</b>
-                </a>
-            </div>
-            <div class="soccard">
-                <div class="icon-animation">
-                    <img src="/assets/fblogo.png" width="56" height="56" />
-                </div>
+            <p style="font-family: TitilliumWeb-Bold; font-size: 25px">
+                Connect With Me!
+            </p>
+            <div class="socmed-card-container">
+                <a href="http://facebook.com/datbadwolf1997">
+                    <div
+                        class="socmed-card"
+                        style="background-color: hsl(200, 98%, 39.4%)"
+                    >
+                        Facebook<br />
+
+                        <img
+                            style="object-fit: scale-down"
+                            src="/assets/fblogo.png"
+                            alt="Facebook logo"
+                            width="15px"
+                        /></div
+                ></a>
+                <a href="http://x.com/datbadwolf97">
+                    <div
+                        class="socmed-card"
+                        style="background-color: hsl(221, 39.3%, 11%)"
+                    >
+                        X<br />
+
+                        <img
+                            style="object-fit: scale-down"
+                            src="/assets/twitlogo.png"
+                            alt="Either X or twitter but X is kinda a shady name
+                            tbh....logo"
+                            width="12px"
+                        /></div
+                ></a>
+                <a href="http://github.com/datbadwolf97">
+                    <div
+                        class="socmed-card"
+                        style="background-color: hsl(217, 32.6%, 17.5%)"
+                    >
+                        Github<br />
+
+                        <img
+                            style="object-fit: scale-down"
+                            src="/assets/gitlogo.png"
+                            alt="GitHub logo"
+                            width="19px"
+                        /></div
+                ></a>
                 <a
-                    class="anchor-normal"
-                    href="http://facebook.com/datbadwolf1997"
-                >
-                    <b>Facebook</b>
-                </a>
-            </div>
-            <div class="soccard">
-                <div class="icon-animation">
-                    <img src="/assets/ytlogo.png" width="56" height="56" />
-                </div>
-                <a
-                    class="anchor-normal"
                     href="https://www.youtube.com/@irfantogashi-dixonfirewolf9073"
                 >
-                    <b> YouTube </b>
-                </a>
-            </div>
-            <div class="soccard">
-                <div class="icon-animation">
-                    <img src="/assets/ytlogo.png" width="56" height="56" />
-                </div>
-                <a
-                    class="anchor-normal"
-                    href="https://m.youtube.com/@redwolf997"
-                >
-                    <b>Youtube II</b>
-                </a>
-            </div>
-            <div class="soccard">
-                <div class="icon-animation">
-                    <img src="/assets/twitlogo.png" width="56" height="56" />
-                </div>
-                <a
-                    class="anchor-normal"
-                    href="https://twitter.com/datbadwolf97"
-                >
-                    <b>Twitter/X</b>
-                </a>
-            </div>
-        </div>
-        &nbsp;<br />
-        <center>
-            <div class="smallbox">
-                Finished/WIPs Sites<br />
-                <center>
-                    <i class="arrow-white down"></i>
-                </center>
-            </div>
-        </center>
-        <br />
-        &nbsp;<br />
-        <div class="boxtxt-hrz-cont">
-            <div class="boxtxt-hrz">
-                <img
-                    class="boxtxt-hrz-img"
-                    src="/assets/waaifu-rhodesislandlogo.png"
-                    height="56"
-                    width="56"
-                />
-                <div class="boxtxt-hrz-txt">
-                    <a
-                        class="anchor-normal"
-                        href="https://waaifu-rhodesisland.000webhostapp.com/"
+                    <div
+                        class="socmed-card"
+                        style="background-color: hsl(0, 73.7%, 41.8%)"
                     >
-                        <b>Waai Fu Site</b></a
-                    ><br />
-                    A site that is dedicated for Waai Fu!
-                </div>
-            </div>
-            <br />
-            &nbsp;<br />
-            <div class="boxtxt-hrz">
-                <img
-                    class="boxtxt-hrz-img"
-                    src="/assets/archchan.png"
-                    height="56"
-                    width="56"
-                />
-                <div class="boxtxt-hrz-txt">
-                    <a class="anchor-normal" href="#"> <b>Arch Linux Chan</b></a
-                    ><br />
-                    Arch Linux Chan website, a collaboration with
-                    <a
-                        class="anchor-normal"
-                        href="https://raviolimavioli.github.io/"
-                        ><u>Ravimo</u></a
-                    >
-                    (Work In Progress).
-                </div>
-            </div>
-        </div>
-        <br />
-        <center>
-            <div class="smallbox">
-                Some Graphic Design IDK<br />
-                <center>
-                    <i class="arrow-white down"></i>
-                </center>
-            </div>
-        </center>
-        <div class="grid-img-container">
-            <div class="item-img-grid">
-                <a target="_blank" href="/assets/gfxs/RI_SEAL-HOLO-X3-Q.png">
-                    <img src="/assets/gfxs/RI_SEAL-HOLO-X3-Q.png" width="120px"
-                /></a>
-            </div>
-            <div class="item-img-grid">
-                <a target="_blank" href="/assets/gfxs/LT1-GLO-X2-Q.png">
-                    <img src="/assets/gfxs/LT1-GLO-X2-Q.png" width="120px"
-                /></a>
-            </div>
-            <div class="item-img-grid">
-                <a target="_blank" href="/assets/gfxs/LT-GLO-X2-Q.png">
-                    <img src="/assets/gfxs/LT-GLO-X2-Q.png" width="120px"
-                /></a>
-            </div>
-            <div class="item-img-grid">
-                <a target="_blank" href="/assets/gfxs/archwall-1440px.png">
-                    <img
-                        class="img-grid-style"
-                        src="/assets/gfxs/archwall-1440px.png"
-                        width="120px"
-                /></a>
-            </div>
-            <div class="item-img-grid">
-                <a target="_blank" href="/assets/gfxs/cn-ny-style.jpg">
-                    <img
-                        class="img-grid-style"
-                        src="/assets/gfxs/cn-ny-style.jpg"
-                        width="120px"
-                /></a>
-            </div>
-            <div class="item-img-grid">
-                <a target="_blank" href="/assets/gfxs/arcpride.png">
-                    <img
-                        class="img-grid-style"
-                        src="/assets/gfxs/arcpride.png"
-                        width="120px"
-                /></a>
-            </div>
-        </div>
-        <center>
-            <img
-                class="img-grid-style"
-                src="/assets/gfxs/BIOS.png"
-                width="320px"
-            />
-            <a target="_blank" href="/assets/gfxs/BIOS.png"> </a><br />
-            <font
-                style="
-                    font-size: 15px;
-                    font-style: italic;
-                    z-index: 3;
-                    font-weight: bold;
-                "
-                >These are royalty free works, feel free to download, share and
-                made them as your own merch (also please be mindful to put a
-                credits into myself as the creator), the displayed images above
-                are just a portion of my work, please refer to my social media
-                links above for more content like these.</font
-            >
-        </center>
-        <center>
-            <div class="smallbox">
-                Houston, we got some partnerships!<br />
-                <center>
-                    <i class="arrow-white down"></i>
-                </center>
-            </div>
-        </center>
-        <br />
-        &nbsp;<br />
-        <div class="boxtxt-hrz-cont">
-            <div class="boxtxt-hrz">
-                <img
-                    class="boxtxt-hrz-img"
-                    style="border-radius: 10%"
-                    src="/assets/yora_avatar.png"
-                    width="56"
-                />
-                <div class="boxtxt-hrz-txt">
-                    <a
-                        class="anchor-normal"
-                        href="https://tokopedia.link/yZArEP7bJGb"
-                    >
-                        <b>Yoratama Merch Store (TOKOPEDIA)</b></a
-                    ><br />
-                    A merchandise store for anime lovers, accepting orders for
-                    custom designs.
-                </div>
-            </div>
-            <br />
-            &nbsp;<br />
-            <div class="boxtxt-hrz">
-                <img
-                    class="boxtxt-hrz-img"
-                    src="/assets/archchan.png"
-                    height="56"
-                    width="56"
-                />
-                <div class="boxtxt-hrz-txt">
-                    <a class="anchor-normal" href="#">
-                        <b>Ravioli Mavioli (Ravimo)</b></a
-                    ><br />
-                    An independent illustrator, programmer and game developer.
-                </div>
+                        YouTube<br />
+
+                        <img
+                            style="object-fit: scale-down"
+                            src="/assets/ytlogo.png"
+                            alt="YT Logo"
+                            width="18px"
+                        /></div
+                ></a>
             </div>
         </div>
     </body>
     <footer>
-        <h3>
-            <center>
-                <div class="f1">
-                    <p>
-                        <strong
-                            >I don't take any requests/commissions so yeah, my
-                            apologies, all of my works are purely intended for
-                            learning purposes.</strong
-                        >
-                    </p>
-                </div>
-            </center>
-        </h3>
-        <br />
-        <div class="footbox">
-            <p><strong>GNU GPL 3.0, Irfan Togashi</strong><br /></p>
-            <font class="ltf">Written purely in HTML and CSS.</font>
-            <br />
-            &nbsp;<br />
-            <font style="font-size: 14px">
-                Optimised for mobile view, please switch into a mobile device
-                for full experience.
-            </font>
+      <center>
+        <div style="font-family: TitilliumWeb-Italic; font-size: 16px">
+          This site are licensed under GNU GPL 3.0.<br>
+          Webpage ver 0.1.
         </div>
+      </center>
     </footer>
 </html>
